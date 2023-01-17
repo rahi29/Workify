@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validateFormu(){
+            var USERNAME=document.getElementById("name");
+            var LASTNAME=document.getElementById("lastname");
+            var Number=document.getElementById("phone");
+            var EMAIL=document.getElementById("mail");
+            var CATEGORY=document.getElementById("category");
+            var ADDRESS=document.getElementById("address");
+
+            if (USERNAME.value =="" || LASTNAME.value=="" || Number.value=="" || EMAIL.value=="" || CATEGORY.value=="" ||ADDRESS.value==""){
+                alert("NO BLANK VALUES ALLOWED");
+                return false;
+            }
+            else{
+                true;
+            }
+
+            
+        }
+    </script>
+    <script src="new.js" defer></script>
+    <link rel="stylesheet" href="new4.css">
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-title">WORKIFY</div>
+        <a href="#" class="toggle-button">
+           <span class="bar"></span> 
+           <span class="bar"></span>
+           <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="Graphic Designers.html">GRAPHIC DESIGNERS</a></li>
+                <li><a href="Data Analysts.html">DATA ANALYSTS</a></li>
+                <li><a href="architects.html">ARCHITECTS</a></li>
+                <li><a href="webdevelopers.html">WEB DEVELOPERS</a></li>
+                <li><a href="join.html">JOIN</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="join-form">
+    
+        <form onsubmit="return validateFormu()" action="Message.html">
+            <H2><b>Come Work With Us</b></H2>
+            <h3>Join The Team</h3>
+            <input type="text" id="name" placeholder=" First Name" required >
+            <input type="text" id=" lastname" placeholder=" Last Name" required >
+            <input type="number" id="phone" placeholder="phone" minlength="10" required >
+            <input type="email" id="mail" placeholder="Email" required >
+            <input type="text" id="category" placeholder="Job category" required >
+            <input type="text" id="address" placeholder="Address" required >
+            <p>Say something about yourself!</p>
+            <textarea id="message" rows="8" placeholder="TEXT HERE"></textarea>
+        <button type="submit"> submit</button>
+        
+         </form>
+          </div>
+          <p style="text-align: center;"><a href="index.html"> NEXT</a></p>
+
+          <p style="text-align: center;"><a href="webdevelopers.html">PREVIOUS</a></p>
+          <footer>FOLLOW US ON</footer>
+    <br/>
+    <div>
+        <a href="https://www.facebook.com/upwork/" ><img src="images - Copy/5296499_fb_facebook_facebook logo_icon.svg" alt="facebook logo" height="50px;" width="30px;"></a>&nbsp;&nbsp;
+        <a href="https://www.linkedin.com/company/upwork/"><img src="images - Copy/5296501_linkedin_network_linkedin logo_icon.svg" alt="linkedin logo" height="50px;" width="30px;"></a>&nbsp;&nbsp;
+        <a href="https://www.instagram.com/upwork/"><img src="images - Copy/3225191_app_instagram_logo_media_popular_icon.svg" alt="instagram logo" height="50px;" width="30px;"></a>&nbsp;&nbsp;
+        <a href="https://twitter.com/Upwork"><img src="images - Copy/3225183_app_logo_media_popular_social_icon (1).svg" alt="Twitter logo" height="50px;" width="30px;"></a>
+    </div>
+        </body>
+</html>

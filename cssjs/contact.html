@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="contact.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-title">WORKIFY</div>
+        <a href="#" class="toggle-button">
+           <span class="bar"></span> 
+           <span class="bar"></span>
+           <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="Graphic Designers.html">GRAPHIC DESIGNERS</a></li>
+                <li><a href="Data Analysts.html">DATA ANALYSTS</a></li>
+                <li><a href="architects.html">ARCHITECTS</a></li>
+                <li><a href="webdevelopers.html">WEB DEVELOPERS</a></li>
+                <li><a href="join.html">JOIN</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div>
+        <H2>LET'S CONNECT</H2>
+        <H2>PLEASE FEEL FREE TO REACH US ON THE INFORMATION BELOW</H2>
+        <div class="contact-container">
+            <div>
+            <img src="images - Copy/8666632_phone_icon (1).svg" alt="phone icon" width="45px;"> 
+            <p>phone +176 3445678</p>
+            </div>
+            <div>
+            <img src="images - Copy/2703074_email_mail_message_letter_icon.svg" alt="email icon" width="50px;">
+            <p>Email :contact@workifypartners.com</p>
+            </div>
+            <div>
+            <img src="images - Copy/172496_location_icon.svg" alt="location icon" width="50px;">
+            <p>Headquarters: Houston, TX</p>
+            </div>
+            </div>
+            <div class="form">
+                <form>
+                    <i class="fas fa-paper-plane"></i>
+                   <H3> GOT ANY QUESTIONS?</H3>
+                   <div class="input-group">
+                   <input type="text" placeholder="Name" id="contact-name" onkeyup="validateName()" required>
+                   <span id="name-error"></span>
+                   </div>
+                   <div class="input-group">
+                   <input type="email" placeholder="Email" id="contact-email" onkeyup="validateEmail()" required>
+                   <span id="email-error"></span>
+                   </div>
+                   <div class="input-group">
+                   <textarea  rows="4" placeholder="Message"  id="contact-message" onkeyup="validateMessage()" required></textarea>
+                   <span id="message-error"></span>
+                   </div>
+                   <button type="submit" onclick="return validateForm()"> submit</button>
+                   <span id="submit-error"></span>
+                   
+                </form>
+                <img src="images - Copy/photo_2022-12-25_12-50-10.jpg" alt="map houston">
+            </div>
+        </div>
+        
+
+<p style="text-align:center"><a href="about.html">PREVIOUS</a></p>
+<p style="text-align: center;"><a href="Graphic Designers.html"> NEXT</a></p>
+    
+        <footer>FOLLOW US ON</footer>
+    <br/>
+    <div>
+        <a href="https://www.facebook.com/upwork/" ><img src="images - Copy/5296499_fb_facebook_facebook logo_icon.svg" alt="facebook logo" height="50px;" width="30px;"></a>&nbsp;&nbsp;
+        <a href="https://www.linkedin.com/company/upwork/"><img src="images - Copy/5296501_linkedin_network_linkedin logo_icon.svg" alt="linkedin logo" height="50px;" width="30px;"></a>&nbsp;&nbsp;
+        <a href="https://www.instagram.com/upwork/"><img src="images - Copy/3225191_app_instagram_logo_media_popular_icon.svg" alt="instagram logo" height="50px;" width="30px;"></a>&nbsp;&nbsp;
+        <a href="https://twitter.com/Upwork"><img src="images - Copy/3225183_app_logo_media_popular_social_icon (1).svg" alt="Twitter logo" height="50px;" width="30px;"></a>
+    </div>
+    <script src="new.js" defer></script>
+</body>
+</html>

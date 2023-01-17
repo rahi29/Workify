@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+    
+
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: lightgrey;
+    
+    
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:black;
+    color: rgb(216, 194, 168);
+    
+}
+.brand-title{
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+.navbar-links ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+.navbar-links li{
+    list-style: none;
+
+}
+.navbar-links li a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+
+}
+.navbar-links li:hover{
+    background-color: grey;
+}
+.toggle-button{
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+@media (max-width: 1000px){
+    .toggle-button{
+        display: flex;
+    }
+    .navbar-links{
+       display: none;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items:flex-start ;
+    }
+    .navbar-links ul{
+        width: 100%;
+        flex-direction: column;
+
+    }
+    .navbar-links li{
+        text-align: center;
+        
+    }
+    .navbar-links li a{
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active{
+        display:flex ;
+    }
+}
+@media (max-width: 400px){
+    .moto{
+        font-size: 12px;
+    }
+}
+.flex-container{
+    display: flex;
+    background-color: rgb(143, 136, 136);
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+    margin-top: 7px;
+    flex-direction: column;
+}
+.moto{
+    text-align: center;
+    font-size: 15px;
+}
+.item{
+    width: 300px;
+    
+
+}
+.item img{
+    width: 300px;
+    margin-top: 15px;
+}
+.item p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+@media (min-width: 790px){
+    .moto{
+        font-size: 50px;
+    }
+    .flex-container{
+        display: grid;
+        padding: 10px;
+        grid-template-columns: 25% 25%;
+        
+
+    }
+
+}
+@media (max-width:290px){
+    .item img{
+        width: 280px;
+        margin-right: 4px;
+    }
+    .item p{
+        width: 280px;
+        margin-left: 10px;
+    }
+}
+
+footer1{
+    background-color: white;
+    width: 100%;
+}

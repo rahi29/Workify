@@ -1,0 +1,63 @@
+body{
+    background-image: url("images - copy/Stocksy_comp_watermarked_479835.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.join-form{
+    width: 100%;
+    height: vh;
+    
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    margin-top: 20px;
+    
+    
+    
+}
+.join-form form{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    
+    background-color:black;
+}
+
+h2,h3{
+
+    color: white;
+    text-align: center;
+}
+form input, form textarea{
+    border:0 ;
+    margin: 10px 0;
+    padding:20px;
+    outline:none ;
+    background-color:aliceblue;
+    font-size: 16px;
+
+}
+form button{
+    padding: 15px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border:0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+}
+
+
+
+    
+
+
+

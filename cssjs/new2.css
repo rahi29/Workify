@@ -1,0 +1,51 @@
+.about-container{
+    display: flex;
+    flex-direction: column;
+}
+.vid{
+    width:400px;
+    height: 200px;
+}
+h2,p{
+    text-align: center;
+}
+.about-container video{
+    margin-top: 10px;
+}
+@media( min-width:1025px) {
+    .about-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color:white;
+        justify-content: space-around;
+        height: 600px;
+        align-items: center;
+    }
+    img{
+        width: 700px;
+        height: 500px;
+    }
+    .about-us{
+        width: 600px;
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+     .about-container video{
+        display: block;
+        margin: auto;
+        width:700px;
+        height: 500px;
+    }
+
+}
+.footer a img{
+    width: 50px;
+    height: 30px;
+}
+
+
+
+    
+
+

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .forms{
+    width: 300px;
+    margin:   0 0;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    font-size: 12px;
+}
+#btn{
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: palevioletred;   ;
+    border: none;
+    border-radius: 4px;
+}
+.input-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
+}
+.input-control input:focus{
+    outline: 0;
+}a
+.input-control .success input{
+    border-color: #09c372;
+}
+.input-control .error input{
+    border-color: #ff3860;
+}
+.input-control .error{
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+}
+.popup{
+    width: 400px;
+    background-color: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    top: 50%;
+    visibility:visible;
+    transform: translate(-50%, -50%) scale(1);
+
+}
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding:10px 0;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+
+}
+    </style>
+</head>
+<body>
+    <form class="forms">
+        <div class="input-control">
+            <label for="fname">First name:</label>
+            <input id="fname" name="fname" type="text">
+            <div class="error"></div>
+        </div>
+        
+        <div class="input-control">
+            <label for="lname">Last name:</label>
+            <input id="lname" name="lname" type="text">
+            <div class="error"></div>
+        </div>
+        
+        <div class="input-control">
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email">
+            <div class="error"></div>
+
+        </div>
+        
+        <div class="input-control">
+            <label for="service">Service Needed:</label>
+            <input id="service" name="service" type="text">
+            <div class="error"></div>
+
+        </div>
+        
+         <div class="input-control">
+            <label for="date">Day of the Week:</label>
+            <input id="date" name="date" type="text, number">
+            <div class="error"></div>
+        </div>
+        
+        <div class="input-control">
+            <label for="time">Time Preference:</label>
+            <input id="time" name="time" type="time">
+            <div class="error"></div>
+        </div>
+        
+
+        <button type="submit" id="btn">Book Now</button>
+        <div class="popup" id="popup">
+            <h2>Thankyou</h2>
+            <p>Your details has been successfully submiited. Thanks!</p>
+            <button type="button" onclick="closePopup()">OK</button>
+        </div>
+
+    </form>
+    <script>
+        const forms = document.getElementsByClassName('forms')[0];
+const fname = document.getElementById('fname');
+const lname = document.getElementById('lname');
+const email = document.getElementById('email');
+const service = document.getElementById('service');
+const date = document.getElementById('date');
+const time = document.getElementById('time');
+
+
+
+let popup = document.getElementById("popup");
+
+
+function openPopup(){
+    popup.classList.add("open-popup");
+}
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
+
+forms.addEventListener('submit', e => {
+    e.preventDefault();
+    validateInputs();
+    openPopup();
+});
+
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success');
+}
+
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText= '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
+const validateInputs = () => {
+    const fnameValue = fname.value.trim();
+    const lnameValue = lname.value.trim();
+    const emailValue = email.value.trim();
+    const serviceValue = service.value.trim();
+    const dateValue = date.value.trim();
+    const timeValue = time.value.trim();
+
+    if (fnameValue === ''){
+        setError(fname, 'First name is required');
+    } else{
+        setSuccess(fname);
+    }
+
+    if (lnameValue === ''){
+        setError(lname, 'Last name is required');
+    } else{
+        setSuccess(lname);
+    }
+
+    if (emailValue === ''){
+        setError(email, 'Email is required');
+    } else{
+        setSuccess(email);
+    }
+}
+    </script>
+</body>
+</html>
